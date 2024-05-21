@@ -1,0 +1,26 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.192.0/containers/ubuntu
+{
+  "name": "hakoni",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "hakoni",
+  "workspaceFolder": "/workspace",
+  "postCreateCommand": "bash .devcontainer/created.sh",
+
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    "prettier.endOfLine": "lf",
+    "files.insertFinalNewline": true,
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.useTabStops": true,
+    "prettier.useTabs": true,
+    "editor.renderWhitespace": "all"
+  },
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // ! for some reason ports defined here aren't working on first build of codespace. Requires
+  // ! you to stop forwarding and then reforward for it to work
+  "forwardPorts": [3000]
+}
