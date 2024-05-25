@@ -1,7 +1,7 @@
 {
-  "name": "@faustwp/getting-started-example",
+  "name": "rate-my-shoe",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "faust dev",
     "build": "faust build",
@@ -23,7 +23,9 @@
     "sass": "^1.54.9"
   },
   "devDependencies": {
-    "next-secure-headers": "^2.2.0"
+    "@types/node": "^20.12.12",
+    "next-secure-headers": "^2.2.0",
+    "typescript": "^5.4.5"
   },
   "engines": {
     "node": ">=18",
