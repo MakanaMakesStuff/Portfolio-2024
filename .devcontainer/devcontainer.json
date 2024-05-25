@@ -19,6 +19,12 @@
     "editor.renderWhitespace": "all"
   },
 
+  "customizations": {
+    "vscode": {
+      "extensions": ["rvest.vs-code-prettier-eslint", "esbenp.prettier-vscode"]
+    }
+  },
+
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // ! for some reason ports defined here aren't working on first build of codespace. Requires
   // ! you to stop forwarding and then reforward for it to work
