@@ -3,18 +3,18 @@ if [ ! -f ./.env.local ]; then
 else
 	echo ".env file exists, will not overwrite"
 fi
-cat << "EOF"
 
-echo "
+echo "Installing dependencies"
+yarn
+
+cat << "EOF"
 ,--.   ,--.        ,--.                            
 |   `.'   | ,--,--.|  |,-. ,--,--.,--,--,  ,--,--. 
 |  |'.'|  |' ,-.  ||     /' ,-.  ||      \' ,-.  | 
 |  |   |  |\ '-'  ||  \  \\ '-'  ||  ||  |\ '-'  | 
 `--'   `--' `--`--'`--'`--'`--`--'`--''--' `--`--'
-                                                                              
-"
-
 EOF
+
 echo "Configuring SSH Keys & Git"
 if [ -f ~/.ssh/id_rsa ]; then
 	ssh-keyscan -H github.com >> ~/.ssh/known_hosts
